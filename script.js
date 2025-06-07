@@ -1,20 +1,17 @@
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        marca: '#28444f' // substitua pelo azul da sua marca
-      }
-    }
-  }
-}
+setInterval(() => {
+    location.reload();
+  }, 30000);
 
-window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const intro = document.getElementById('intro');
-        intro.classList.add('fade-out');
-      }, 2500);
-    });
+  // Remove a tela de introdução após 2 segundos
+  window.addEventListener('DOMContentLoaded', () => {
+    const intro = document.getElementById('intro');
+
     setTimeout(() => {
-  const intro = document.getElementById('intro');
-  intro.classList.add('fade-out');
-}, 2500);
+      intro.classList.add('fade-out');
+
+      // Remove do DOM após a transição (1 segundo)
+      setTimeout(() => {
+        intro.remove();
+      }, 1000);
+    }, 2000); // Espera 2 segundos antes de sumir
+  });

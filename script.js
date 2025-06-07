@@ -14,3 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
         intro.classList.add('fade-out');
       }, 2500);
     });
+    setTimeout(() => {
+  const intro = document.getElementById('intro');
+  intro.classList.add('fade-out');
+}, 2500);
